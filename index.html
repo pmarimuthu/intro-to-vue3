@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Vue3</title>
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <div>Nav Bar {{ clock }} </div>
+        <div>Cart {{ cart }}</div>
+        <div>
+            <hr> <product :premium="premium" @add-to-cart="updateCart"></product>
+            <hr> <product :premium="premium" @add-to-cart="updateCart"></product>
+            <hr> <product :premium="premium" @add-to-cart="updateCart"></product>
+
+            <hr>
+        </div>
+    </div>
+
+    <!-- Import App -->
+    <script src="./script/main.js"></script>
+
+    <!-- Import Components-->
+    <script src="./script/component/Product.js"></script>
+
+    <!-- Mount App -->
+    <script>
+        const mountApp = app.mount('#app');
+    </script>
+
+</body>
+
+</html>
